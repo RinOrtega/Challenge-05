@@ -1,7 +1,41 @@
-var today = dayjs();
-$('currentday').text(today.format('dddd, mmmm d'));
+var CrntDay = day.js();
 
+$('CrntDay').text(CrntDay.format('dddd, mmmm'));
 
+$('CrntTime').text(CrntDay.format(hh:mm:ss A));
+$(document).ready(function () {
+    function timeblock() {
+        var CrntHr = dayjs().hour();
+        console.log(CrntHr);
+        $('time-Block').each(function() {
+            var block = parseInt(this.id)
+            console.log(block)
+            if (block < CrntHr) {
+                $(this).removeclass('present');
+                $(this).removeclass('future');
+                $(this).addclass('past');
+            }
+            else if (block == CrntHr) {
+                $(this).removeclass('past');
+                $(this).removeclass('future');
+                $(this).addclass('present');
+            }
+            else {
+                $(this).removeclass('past');
+                $(this).removeclass('present');
+                $(this).addclass('future');
+            }
+        }
+    }
+})
+
+function timeBlock();
+
+$('.saveBtn').on('click', function() {
+    const key = $(this).parent().attr('id');
+    const value = $(this).siblings('.description').val();
+    localStorage.setItem(key, value);
+}
 
 
 
@@ -31,4 +65,4 @@ $('currentday').text(today.format('dddd, mmmm d'));
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
     //
-    // TODO: Add code to display the current date in the header of the page.
+    // TODO: Add code to display the current date in the header of the page
