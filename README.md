@@ -45,3 +45,8 @@ Attempted to add functionality using JavaScript
 
 Attempted to update webpage with JavaScript by following steps provider in the assignment. Link to webpage and Git Repo will be listed below.
 
+## Assignment Links
+
+Link to webpage - https://rinortega.github.io/Work-Day-Scheduler/
+
+Link to GitHub Repo - https://github.com/RinOrtega/Work-Day-Scheduler
